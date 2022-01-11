@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="bigBox">
+      <h1>Rock Paper Scissors Game</h1>
+      <div class="flex-container">
+        <div class="players" id='buttons'>
+          <h2>Player Choice:</h2>
+          <button type="button" class="button" id="rock">Rock</button>
+          <button type="button" class="button" id="paper">Paper</button>
+          <button type="button" class="button" id="scissors">Scissors</button>
+          <br /><br />
+        </div>
+      </div>
+      <div class="players" id="computerChoice">
+        <h2>Computer Choice:</h2>
+
+        <p></p>
+      </div>
+      <div id="winner" style="font-weight: bold"></div>
+      <div style="border: 2px dotted rgb(175, 42, 109);
+      font-weight:bold;" '>Round:<span id='round'></span> </div>
+      <div class="flex-container">
+        <div class="players" >Player Score:<p id="pScore"></p></div>
+        <div class="players">Computer Score:<p id="cScore"></p></div>
+      </div>
+    </div>
+
+    <script>
+      function computerPlay() {
+        let test = Math.floor(Math.random() * 3);
+        let choice = document.querySelector("p");
+        if (test === 1) {
+          choice.innerHTML = "Rock";
+          return "ROCK";
+        } else if (test === 2) {
+          choice.innerHTML = "Paper";
+          return "PAPER";
+        } else {
+          choice.innerHTML = "Scissors";
+          return "SCISSORS";
+        }
+      }
+
+      function playGame(playerSelection, computerSelection) {
+        if (playerSelection === "PAPER" && computerSelection === "SCISSORS") {
+          return "You Lose! Scissors beats Paper!";
+        } else if (
+          playerSelection === "PAPER" &&
+          computerSelection === "ROCK"
+        ) {
+          return "You Win! Paper beats Rock!";
+        } else if (
+          playerSelection === "ROCK" &&
+          computerSelection === "SCISSORS"
+        ) {
+          return "You Win! Rock beats Scissors!";
+        } else if (
+          playerSelection === "ROCK" &&
+          computerSelection === "PAPER"
+        ) {
+          return "You Lose! Paper beats Rock!";
+        } else if (
+          playerSelection === "SCISSORS" &&
+          computerSelection === "PAPER"
+        ) {
+          return "You Win! Paper beats Scissors!";
+        } else if (
+          playerSelection === "SCISSORS" &&
+          computerSelection === "ROCK"
+        ) {
+          return "You Lose! Rock beats Scissors!";
+        } else if (playerSelection === computerSelection) {
+          return "You both picked the same thing.  It's a tie!";
+        } else {
+          return "ERROR!";
+        }
+      }
+
+
+      let playerScore = 0;
+      let computerScore = 0;
+      let counter = 0;
+
+      function game(playerWord) {
+        let computerWord = computerPlay();
+        let test = playGame(playerWord, computerWord);
+        let winner = document.getElementById("winner");
+        let pScore = document.getElementById("pScore");
+        let cScore = document.getElementById("cScore");
+        let round = document.getElementById('round');
+
+        if (test.includes("Win")) {
+          winner.innerHTML = "You are the winner! :)";
+          playerScore += 1;
+          counter += 1;
+          pScore.innerHTML = `${playerScore}`;
+          cScore.innerHTML = `${computerScore}`;
+          round.innerHTML = counter;
+        } else if (test.includes("Lose")) {
+          winner.innerHTML = "The computer has won!  Try again!";
+          computerScore += 1;
+          counter += 1;
+          pScore.innerHTML = `${playerScore}`;
+          cScore.innerHTML = `${computerScore}`;
+          round.innerHTML = counter;
+        }
+      }
+
+      let rock = document.getElementById("rock");
+      let paper = document.getElementById("paper");
+      let scissors = document.getElementById("scissors");
+      //Rock
+      rock.addEventListener("click", function (e) {
+        game("ROCK");
+      });
+
+      //Paper
+      paper.addEventListener("click", function (e) {
+        game("PAPER");
+      });
+
+      //Scissors
+      scissors.addEventListener("click", function (e) {
+        game("SCISSORS");
+      });
+
+
+
+      
+     
+    </script>
+  </body>
+</html>
