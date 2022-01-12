@@ -37,7 +37,7 @@ function createHoverBlack() {
     });
   }
 }
-//createHoverBlack();
+createHoverBlack();
 //Color Button
 let colorButton = document.getElementById("color");
 
