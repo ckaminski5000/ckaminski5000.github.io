@@ -1,0 +1,65 @@
+.body{
+    display:block;
+}
+
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    padding: 15px;
+    text-align: center;
+}
+
+#board{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex 1;
+    width: 700px;
+    height: 500px;
+    padding: 25 px;
+    border: 4px solid red;
+}
+
+.flex-container{
+    display: flex;
+    flex 1;
+    flex-grow: 2;
+    width: 100%;
+    min-height: 0;
+}
+
+
+.flexBoxes{
+   
+    flex: 1;
+    min-width: none;
+    background-color: white;
+    color: white;
+}
+
+.flexBoxes_Hover{
+    flex: 1;
+    width: 100%;
+    min-height: 0;
+    clear:both;
+    background-color: black;
+    
+}
+
+#reset{
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 3px;
+    border: none;
+    background-color: red;
+    color: white;
+    text-decoration: none;
+    padding: 7px 7px;
+    text-align: center;
+}
+
+#reset:hover{
+    background-color: pink;
+    color: black;
+}
