@@ -1,0 +1,78 @@
+body {
+  background-image: url("grassbg.jpg");
+}
+
+.mainCalculator {
+  width: 400px;
+  height: 350px;
+  background-color: rgb(193, 252, 193);
+  border: 3px solid black;
+  border-radius: 4px;
+  margin: auto;
+  padding-top: 10px;
+  box-shadow: 5px 7px rgb(184, 181, 181);
+}
+
+#display {
+  width: 350px;
+  height: 40px;
+  background-color: rgb(248, 240, 240);
+  border: 2px solid black;
+  margin: auto;
+  padding: 5px;
+  border-radius: 4px;
+}
+
+.flex-container {
+  display: flex;
+}
+
+.buttonContainers {
+  flex: 1;
+  display:flex;
+  
+  justify-content: center;
+  align-items: center;
+}
+
+.button {
+  display: inline-block;
+  padding: 5px;
+  border: 0.1em solid #000000;
+  border-radius: 0.12em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  font-size: 25px;
+  color: #000000;
+  text-shadow: 0 0.04em 0.04em rgba(0, 0, 0, 0.35);
+  background-color: #8ef08a;
+  text-align: center;
+  transition: all 0.15s;
+  border-radius: 3px;
+  width: 80%;
+  height: 53px;
+}
+
+.button:hover {
+  text-shadow: 0 0 2em rgba(255, 255, 255, 1);
+  color: #ffffff;
+  border-color: #ffffff;
+}
+
+.operations{
+    font-size: 30px;
+    background-color: rgb(185, 211, 240);
+}
+
+.displayNumbers {
+    font-size: 27px;
+    display:table-cell;
+    vertical-align: middle;
+    font-family: "Roboto", sans-serif;
+}
+
+#equals{
+  background-color: rgb(241, 151, 151);
+}
