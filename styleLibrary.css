@@ -1,0 +1,80 @@
+body{
+    background-color: gray;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+.mainbox{
+    margin: auto;
+    width: 850px;
+    height: 500px;
+    border-radius: 10px;
+    background-color: rgb(202, 224, 243);
+    text-align: center;
+    padding-top: 10px;
+}
+
+.tableboo{
+    font-weight: bold;
+    text-align: left;
+}
+
+.button{
+    margin: auto;
+}
+
+
+
+#closeBtn{
+    color: #ccc;
+    font-size: 30px;
+}  
+
+#closeBtn:hover, #closeBtn:focus{
+    color: #000000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.header{
+    background-color: rgb(9, 2, 105);
+    height: 50px;
+    width: 100%;
+    margin: auto;
+    color:white;
+    display:flex;
+    
+}
+
+.headerBoxes{
+    flex: 1 1 1;
+    
+    
+}
+
+.formBox{
+    padding: 5px;
+    font-weight: bold;
+}
+
+.formBoxes{
+   background-color: #eff2fc;
+   border-radius: 10px;
+   height: 40px;
+   width: 90%; 
+   border: 2px solid rgb(5, 5, 43);
+}
+
+.deleteBtn{
+    height: 30px;
+    width: 70px;
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 2px;
+}
+
+.columnClass{
+    text-align: left;
+    padding: 5px 0px;
+}
