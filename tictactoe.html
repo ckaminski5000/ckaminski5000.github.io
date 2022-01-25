@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="tictactoestyle.css" />
+    <title>Tic Tac Toe Game</title>
+  </head>
+  <body>
+    <h1>Tic Tac Toe</h1>
+    <div class="flex-container">
+      <div clas="mainFlexBoxes" style="padding: 5px">
+        <h2 style="text-align: center;">Choose a Character</h2>
+        <div class="flex-container" style="padding: 5px" style="width: 500px;">
+          <div class="playerToggle" ><h3>Player 1</h3><div id="toggle1"></div></div>
+          <div class="playerToggle" style="padding-top: 40px;">
+            <div id="toggle"></div>
+          </div>
+          <div class="playerToggle" ><h3>Player 2</h3><div id="toggle2"></div></div>
+        </div>
+      </div>
+      <div class="mainFlexBoxes" style="padding-left: 50px">
+        <div id="gameBox">
+          <div class="flex-container">
+            <div class="tictacBoxes" id="box1">
+              <span style="font-size: 70px; visibility: hidden">x</span>
+            </div>
+            <div class="tictacBoxes" id="box2">
+              <span style="font-size: 70px; visibility: hidden">x</span>
+            </div>
+            <div class="tictacBoxes" id="box3">
+              <span style="font-size: 70px; visibility: hidden">x</span>
+            </div>
+          </div>
+          <div class="flex-container">
+            <div class="tictacBoxes" id="box4">
+              <span style="font-size: 70px; visibility: hidden">x</span>
+            </div>
+            <div class="tictacBoxes" id="box5">
+              <span style="font-size: 70px; visibility: hidden">x</span>
+            </div>
+            <div class="tictacBoxes" id="box6">
+              <span style="font-size: 70px; visibility: hidden">x</span>
+            </div>
+          </div>
+          <div class="flex-container">
+            <div class="tictacBoxes" id="box7">
+              <span style="font-size: 70px; visibility: hidden">x</span>
+            </div>
+            <div class="tictacBoxes" id="box8">
+              <span style="font-size: 70px; visibility: hidden">x</span>
+            </div>
+            <div class="tictacBoxes" id="box9">
+              <span style="font-size: 70px; visibility: hidden">x</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mainFlexBoxes flex-container" style="flex-direction: column;" >
+        <div id="display" style="flex: 1; flex-shrink: 2;"></div>
+        <div style="flex: 1;"><div id="playAgain" style="visibility: hidden"></div></div>
+        
+      </div>
+    </div>
+    <script src="tictactoe.js"></script>
+  </body>
+</html>
