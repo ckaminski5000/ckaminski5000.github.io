@@ -117,7 +117,7 @@ clear.addEventListener("click", function (e) {
 
 function completeOperation(operation, a, b) {
   if (operation === "+") {
-    return multiplyFunction(a, b);
+    return addFunction(a, b);
   } else if (operation === "-") {
     return subtractFunction(a, b);
   } else if (operation === "*") {
